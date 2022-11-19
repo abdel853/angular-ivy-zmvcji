@@ -1,0 +1,31 @@
+<div class="contentContainer">
+  <p>
+    <mat-toolbar class="toolbarContainer">
+      <!--Menu Button-->
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon
+          ><span class="material-symbols-rounded"> menu </span></mat-icon
+        >
+      </button>
+      <mat-menu #menu="matMenu">
+        <!--Home Button inside the dropdown menu-->
+        <a class="menuItem" mat-menu-item routerLink="home">
+          <mat-icon class="material-symbols-rounded">home</mat-icon>
+          <span>home</span>
+        </a>
+      </mat-menu>
+      <span class="spacer"></span>
+
+      <span> <a class="title" href="/"> Art Store App </a></span>
+      <span class="spacer"></span>
+      <button mat-icon-button routerLink="login">
+        <mat-icon>login</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+  <router-outlet></router-outlet>
+</div>
